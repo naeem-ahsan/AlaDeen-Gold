@@ -1,0 +1,21 @@
+{
+  "name": "vendor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "animate.css": "^4.1.1",
+    "counterup2": "^2.0.2",
+    "magic-scroll.js": "^1.0.8",
+    "materialize-css": "^1.0.0-rc.2",
+    "particles.js": "^2.0.0",
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.2"
+  }
+}

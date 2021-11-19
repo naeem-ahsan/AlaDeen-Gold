@@ -1,0 +1,948 @@
+/*
+-------------------------------------------------
+  Theme Name: RATH - App Landing HTML5 Template
+  Theme URL: http://projects.andimpex.com/ismail/rath/
+  Author: Al-Ebreiz Global Capital
+  Author URL:  
+  Creation Date: 09/September/2021
+  Description:A default stylesheet for AlaDeen Gold Wallet - App Landing HTML5 Template Materialize CSS,jQuery, HTML5 Template.
+  Version: 1.00
+  Primary use: Business, responsive, materialize css, html5, jQuery, clean, modern, , landing page, app landing etc.
+
+
+  ---------------------------------------------------
+  Developed By: Naeem Ahsan
+  Developer URL: https://www.linkedin.com/in/naeem10ahsan/
+
+  ---------------------------------------------------
+
+  --------------------------------------------------
+  Table of Contents
+  --------------------------------------------------
+  1. General CSS
+  2. Theme All Transitions
+  3. Animation
+  4. Form Control Reset CSS
+  5. Scroll To Top Area
+  5. Preloader Area Start
+  6. Back to top Button
+  7. Typography
+  8. AlaDeen Gold Template Default CSS
+  9. Section Heading
+  10. Nav Bar
+  11. Banner Section
+  12. Partner Company Section
+  13. About Section
+  14. How it works Section
+  15.Reviews Area
+  16. Home Blog Posts
+  17. Contact Area
+  18.Footer Area/Copyright Area
+  19.Blog Page
+  20.Blog Details Page
+  21. Home Version 2
+  22. Home Version 3 Page
+  23. Home Version 4 Page
+  24. Home Version 5 Page
+  25. Responsive CSS
+
+------------------------------------------------ */
+
+
+/*-----------------------------------------------
+            1. General Style
+-------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff none repeat scroll;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Titillium Web', sans-serif;
+    color: #777c87;
+    letter-spacing: 0.05em;
+    overflow-x: hidden;
+
+}
+
+section {
+    overflow: hidden;
+}
+
+p {
+    line-height: 1.75;
+    color: #dddddd;
+}
+
+a {
+    color: #dddddd;
+}
+
+/* ------------------------------
+    2. Theme All Transitions
+------------------------------- */
+a,
+#mainNav,
+.theme-button,
+.owl-carousel button.owl-dot,
+.widget-recent-posts ul li a p:hover {
+    transition: all .5s ease-in-out;
+}
+
+.slow-transition,
+.theme-button,
+.reviews_slide_nav .testi_prev,
+.reviews_slide_nav .testi_next,
+.testi_prev,
+.testi_next,
+.flaticon-right-arrow::before,
+.flaticon-left-arrow::before,
+#scroll,
+.home-5 #mainNav .navbar-nav .nav-item .nav-link::before {
+    transition: all .7s ease-in-out;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a>* {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(0, 170, 255);
+}
+
+::selection {
+    background-color: #93ebfb;
+}
+
+img::selection {
+    background: transparent;
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+
+/*----------------------
+      3. Animation
+-----------------------*/
+
+@keyframes bobbingAnim {
+    0% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out
+    }
+
+    50% {
+        transform: translate(0px, 14px);
+        animation-timing-function: ease-in-out
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(359deg);
+    }
+}
+
+/*-------------------------------
+     4. Form Control Reset CSS
+---------------------------------*/
+
+.form-control {
+    border-radius: 0;
+    border: none;
+    background-color: #e9f2f7;
+    height: 50px;
+    color: #777c87;
+}
+
+.form-control:focus {
+    background-color: #e9f2f7;
+    border-color: #dddddd;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #a0a3aa;
+}
+
+/*-------------------------------------------
+               5.  Preloader
+-------------------------------------------*/
+#preloader {
+    background-color: #21252e;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+}
+
+#status {
+    background-image: url('../img/79.gif');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+/*----------------------------
+    6. Back to top Button
+--------------------------------*/
+.go-top.active {
+    top: 98%;
+    -webkit-transform: translateY(-98%);
+    transform: translateY(-98%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    right: 15px;
+    color: #000000;
+    background-color: #AA8C2C;
+    z-index: 999;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .9s;
+    transition: .9s;
+    border-radius: 50%;
+}
+
+.go-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #7F6921;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    border-radius: 50%;
+}
+
+.go-top i {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.go-top i:last-child {
+    opacity: 0;
+    visibility: hidden;
+    top: 60%;
+}
+
+.go-top:hover,
+.go-top:focus {
+    color: #fff;
+}
+
+.go-top:hover::before,
+.go-top:focus::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top:hover i:first-child,
+.go-top:focus i:first-child {
+    opacity: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.go-top:hover i:last-child,
+.go-top:focus i:last-child {
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+}
+
+/*------------------------------------------
+            7.  Typography
+-------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #eee;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+figure {
+    margin: 0 0 0;
+}
+
+/*--------------------------------------
+   8. AlaDeen Gold Template Default CSS
+----------------------------------------*/
+h2.section-heading {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+section {
+    position: relative;
+    z-index: 99;
+}
+
+.section-wrapper {
+    padding: 300px 0;
+}
+
+.section-wrapper-sm {
+    padding: 80px 0;
+}
+
+.section-overlay {
+    height: 100%;
+    width: 100%;
+}
+
+.page-banner-area .section-overlay {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.padding-zero {
+    padding: 0 0;
+}
+
+.section-content-pt {
+    padding: 100px 0 0 0;
+}
+
+/*-------------------------
+      9. Section Heading
+---------------------------*/
+.section-heading {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+
+/*=====================
+     10. Nav Bar
+======================*/
+.navigation {
+    background: rgba(18, 21, 26, 0.5);
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    padding: 10px 0;
+}
+
+.nav-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-bg {
+    z-index: 999;
+    background: #0F1116 !important;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: all 600ms ease-in-out;
+}
+
+.sidenav {
+    background-color: rgba(15, 17, 22, 0.9);
+}
+
+
+/***~~~~~~~~~~~~~~~~~~~~
+     INDEX HTML PAGE
+~~~~~~~~~~~~~~~~~~~~~~***/
+/*========================
+     11. Banner Section
+==========================*/
+#particles-js {
+    background-color: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.hero-left-content p {
+    margin: 40px 0;
+}
+
+.hero-right-content {
+    position: relative;
+}
+
+.hero-right-top-frame img {
+    position: absolute;
+    right: 0px;
+    top: -100px;
+}
+
+/*=================================
+     12. Partner Company Section
+==================================*/
+#partner {
+    background-image: linear-gradient(145deg, rgba(212, 175, 55, 0.8) 0%, rgba(0, 0, 0, 0.4) 75%),
+        url("../img/image-from-rawpixel-id-327454-jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-carousel span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 10px;
+    background: rgb(255, 255, 255) !important;
+    display: block;
+    backface-visibility: visible;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.owl-carousel .active span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 10px;
+    background: #000000 !important;
+    box-shadow: 0 0 0 6px rgb(0 0 0 / 20%);
+    display: block;
+    backface-visibility: visible;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+/*=================================
+    13.  About Section
+==================================*/
+#about {
+    background: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.about-heading {
+    position: relative;
+}
+
+.about-heading::before {
+    content: "About";
+    position: absolute;
+    right: 0px;
+    top: -160px;
+    color: rgba(247, 245, 248, 0.2);
+    font-size: 200px;
+    font-weight: 700;
+    z-index: -1;
+}
+
+.background-shape {
+    animation-name: bobbingAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+}
+
+.abt-right-content {
+    padding: 100px 0 0 0;
+}
+
+.counter-area {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter-box {
+    position: relative;
+    text-align: center;
+}
+
+.count-content {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    color: #42454f;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+    color: #777c87;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/*=================================
+    14.  How it works Section
+==================================*/
+#how {
+    background-image: linear-gradient(-20deg, rgba(212, 175, 55, 0.8) 10%, rgba(0, 0, 0, 0.6) 90%),
+        url("../img/image-from-rawpixel-id-596566-jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.how-body-content {
+    text-align: center;
+}
+
+.how-body-icon i {
+    font-size: 40px;
+    color: #fff;
+    background: linear-gradient(10deg, rgba(3, 3, 3, 0.8) 10%, rgba(170, 107, 57, 0.8) 90%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset;
+}
+
+.how-body-text h5 {
+    margin: 20px 0;
+}
+
+/*------Hover State----------*/
+.how-body-icon i:hover {
+    animation: rotation 600ms ease-in-out;
+    -webkit-animation: rotation 600ms ease-in-out;
+}
+
+/*=================================
+       Feature Section
+==================================*/
+#feature {
+    background: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.bg-shape {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+}
+
+.bg-shape img {
+    opacity: 0.6;
+}
+
+.feature-heading {
+    position: relative;
+}
+
+.feature-heading::before {
+    content: "Feature";
+    position: absolute;
+    left: 0px;
+    top: -160px;
+    color: rgba(247, 245, 248, 0.2);
+    font-size: 200px;
+    font-weight: 700;
+    z-index: -1;
+}
+
+.ft-box {
+    margin: 30px 0;
+}
+
+.features-box {
+    display: flex;
+}
+
+.single-features-text h5 {
+    margin-bottom: 10px;
+}
+
+/*=================================
+       video Section
+==================================*/
+#video {
+    background-image: linear-gradient(130deg, rgba(212, 175, 55, 0.6) 20%, rgba(0, 0, 0, 0.7) 80%),
+        url("../img/image-from-rawpixel-id-video-jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.video-container {
+    border-radius: 30px;
+}
+
+/*=================================
+       Screen Shot Section
+==================================*/
+#screen-shot {
+    background: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.screen-shot-heading::before {
+    content: "Gallery";
+    position: absolute;
+    left: 0px;
+    top: -160px;
+    color: rgba(247, 245, 248, 0.2);
+    font-size: 200px;
+    font-weight: 700;
+    z-index: -1;
+}
+
+.screenshot-left,
+.screenshots-slider-wrapper {
+    margin: 0 20px;
+}
+
+.item {
+    transform: scale(0.8);
+}
+
+.screenshot-box {
+    margin: 12% 6%;
+}
+
+.screenshot-box img {
+    border-radius: 30px;
+}
+
+#screen-shot .owl-item.active.center .item {
+    transform: scale(1);
+}
+
+#screen-shot .owl-item.active.center .item .screenshots-box {
+    margin: 20% 12%;
+    padding: 20px 9px 0 11px;
+}
+
+#screen-shot .owl-item.active.center .item img {
+    padding: 10px;
+}
+
+#screen-shot .owl-item.active.center .item {
+    background-image: url("../img/iphone-mockup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5px 10px;
+}
+
+
+/*=================================
+       Testimonial Section
+==================================*/
+#review {
+    background-image: linear-gradient(-60deg, rgba(212, 175, 55, 0.6) 40%, rgba(0, 0, 0, 0.2) 70%),
+        url("../img/image-from-rawpixel-yo-jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.review-box {
+    background-color: #21252e;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 30px;
+    box-shadow: -5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.review-box i {
+    font-size: 28px;
+}
+
+.review-box p {
+    margin: 30px;
+}
+
+.review-box-author {
+    display: flex;
+    align-items: center;
+
+}
+
+.review-author-img {
+    overflow: hidden;
+    width: 80px !important;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 20px;
+}
+
+
+/*=================================
+       FAQ Section
+==================================*/
+#faq {
+    background: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.faq-list li {
+    list-style: circle !important;
+}
+
+.collapsible-header {
+    position: relative;
+    border-bottom: none;
+    background-color: transparent
+}
+
+.collapsible {
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid rgba(221, 221, 221, 0.3);
+    margin: .5rem 0 1rem 0;
+}
+
+.collapsible-body {
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.collapsible-header::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    background-color: #f6cdbd;
+    left: -7px;
+    border-radius: 50%;
+    top: 17px;
+}
+
+.faq-right,
+.faq-left {
+    margin: 0 5px;
+}
+
+.faq-pdf {
+    margin-top: 20px;
+}
+
+/*=================================
+       Download Section
+==================================*/
+#download {
+    background: #21252e;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.download-content img {
+    border-radius: 20px;
+}
+
+/*=================================
+       Footer Section
+==================================*/
+#footer {
+    background: rgba(33, 37, 46, 1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
+}
+
+.footer-wrap {
+    padding: 80px 0;
+}
+
+.footer-head {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-head i {
+    margin-right: 10px;
+}
+
+.footer-content ul li:not(:first-child) {
+    padding: 10px 0 0 0;
+}
+
+.footer-copyright {
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+/***~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Privacy Policy HTML PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~***/
+#breadcrumb {
+    background-color: #21252e;
+}
+/*===============================
+      Privacy Policy Section
+================================*/
+#privacyPolicy {
+    background-color: #21252e;
+}
+
+.privacyPolicyHead p {
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(221, 221, 221, 0.2);
+}
+.privacyPolicyBodyBox {
+    margin: 30px 0;
+}
+
+.privacyPolicyBodyBox h5 {
+    padding-bottom: 10px;
+}
+
+.privacyPolicyBodyBox p {
+    padding-top: 10px;
+}
+
+.privacyPolicyBodyBox ul li {
+    color: rgba(221, 221, 221, 0.6);
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.privacyPolicyBodyBox .inside-list li {
+    list-style-type: circle;
+}
+
+.active-nav {
+    color:  #dd9933;
+}
+
+.breadcrumb-nav i {
+    padding: 0 10px;
+}
