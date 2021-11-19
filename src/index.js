@@ -15,7 +15,7 @@ const rootElement = document.getElementById("root");
 render(
   <Router>
     <Routes>
-        <Route path="/AlaDeen-Gold" element={<App />} />
+        <Route path="/" element={<App />} />
         <Route path="Terms" element={<Terms />} />
         <Route path="Privacy" element={<Privacy />} />
     </Routes>
