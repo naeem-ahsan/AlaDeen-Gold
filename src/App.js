@@ -513,8 +513,6 @@ export default class App extends Component {
             <Footer />
             {/* Back-To-Top */}
             <Backtop />
-            {/* WhatsApp-Section */}
-            <Whatsapp />
           </>
         );
     }
