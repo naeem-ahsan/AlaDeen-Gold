@@ -1,7 +1,6 @@
 import React from "react";
 import { Component } from "react";
 import Backtop from "./Backtop";
-import Whatsapp from './Whatsapp';
 import Download from "./routes/Download";
 import Footer from "./routes/Footer";
 
